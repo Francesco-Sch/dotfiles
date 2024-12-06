@@ -131,3 +131,12 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# kubectl
+
+alias k='kubectl'
+
+source <(kubectl completion zsh)
+complete -o default -F __start_kubectl k
+
+# pyenv
+eval "$(pyenv init --path)"
