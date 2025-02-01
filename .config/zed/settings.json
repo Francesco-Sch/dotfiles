@@ -25,5 +25,19 @@
   "assistant": {
     "dock": "left",
     "version": "2"
+  },
+
+  // List of extensions
+  "auto_install_extensions": {
+    // Frontend
+    "html": true,
+    "scss": true,
+    "emmet": true,
+    "vue": true,
+    "svelte": true,
+
+    // DevOps
+    "dockerfile": true,
+    "docker-compose": true
   }
 }
