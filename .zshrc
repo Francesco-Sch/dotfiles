@@ -39,6 +39,9 @@ alias l="eza -l --all --git --git-repos"
 alias cat="bat"
 alias ct="bat"
 
+# Code Editor
+alias code="zed"
+
 # Kubernetes
 alias k='kubectl'
 
