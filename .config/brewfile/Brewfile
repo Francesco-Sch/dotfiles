@@ -1,0 +1,103 @@
+# Francesco's
+# Stack
+#
+# All the things I need to operate my digital self
+# Categorized into different areas of interest
+
+# Tap every repository I need for this
+# tap "homebrew/bundle"
+# tap "homebrew/cask-drivers"
+# tap "homebrew/cask-versions"
+# tap "homebrew/services"
+
+
+# ---- System ----
+# Formulae
+brew "bat" # Preview files in terminal
+brew "eza" # Lists files in terminal
+brew "ffmpeg" # File conversion
+brew "fzf" # Fuzzy-find files
+brew "tmux"
+brew "tree"
+brew "wget"
+brew "yadm" # Dotfiles Manager of choice
+brew "zip"
+brew "zoxide"
+
+# Casks
+cask "amethyst" # Window Manager of choice
+cask "firefox"
+cask "firefox@developer-edition"
+cask "google-chrome"
+cask "logitech-options"
+cask "stats"
+cask "surfshark"
+
+# Apps
+mas "pCloud Pass", id: 1607974524
+
+
+# ---- Communication ----
+
+# Casks
+cask "ferdium"
+cask "thunderbird"
+cask "signal"
+cask "zoom"
+
+
+# ---- Design ----
+
+# Casks
+cask "adobe-creative-cloud" # I hope I can let this go soon
+cask "figma"
+cask "obs"
+
+
+# ---- Programming ----
+
+# Formulae
+brew "act" # To test run GitHub Actions locally
+brew "ansible"
+brew "deno"
+brew "gh"
+brew "git"
+brew "git-filter-repo"
+brew "git-lfs"
+brew "go"
+brew "httpie"
+brew "jq"
+brew "kubernetes-cli"
+brew "node"
+brew "ollama"
+brew "pnpm"
+brew "pyenv"
+brew "python@3.13"
+brew "vim"
+
+# Casks
+cask "balenaetcher"
+cask "cyberduck" # (S)FTP Client
+cask "ghostty" # Terminal of Choice
+cask "podman-desktop"
+cask "utm"
+cask "zed"
+
+# Apps
+mas "Xcode", id: 497799835
+
+
+# ---- Productivity ----
+
+# Casks
+cask "obsidian"
+
+# Apps
+mas "Session", id: 1521432881 # Pomodoro Timer
+
+
+# ---- Entertainment ----
+
+# Casks
+cask "spotify"
+cask "vlc"
