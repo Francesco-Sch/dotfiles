@@ -42,7 +42,7 @@
   },
 
   // Telemetry
-  // Allow diagnostic ((to help to fix bugs)
+  // Allow diagnostic (to help to fix bugs)
   // but disable metrics
   "telemetry": {
     "diagnostics": true,
