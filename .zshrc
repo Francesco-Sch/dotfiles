@@ -24,6 +24,7 @@ ENABLE_CORRECTION="true"
 plugins=(
     git
     zoxide
+    zsh-autosuggestions
     zsh-syntax-highlighting
 )
 
@@ -33,7 +34,12 @@ source $ZSH/oh-my-zsh.sh
 # ---- User Configuration ----
 
 # -- Aliases --
+# Navigation the file system
 alias l="eza -l --all --git --git-repos"
+alias cat="bat"
+alias ct="bat"
+
+# Kubernetes
 alias k='kubectl'
 
 
