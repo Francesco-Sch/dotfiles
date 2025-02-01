@@ -1,0 +1,20 @@
+# Francesco's 
+# Ghostty Configuration
+
+# ---- Color Theme ----
+theme = GitHub-Dark-Default
+
+# ---- Font Settings ----
+font-family = CommitMono
+
+font-size = 14.5
+
+font-style = 500Regular
+font-style-italic = 500Italic
+font-style-bold = 650Regular
+font-style-bold-italic = 650Italic
+
+# ---- Shell Integration ----
+shell-integration = zsh
+
+adw-toolbar-style = flat
