@@ -39,5 +39,13 @@
     // DevOps
     "dockerfile": true,
     "docker-compose": true
+  },
+
+  // Telemetry
+  // Allow diagnostic ((to help to fix bugs)
+  // but disable metrics
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false
   }
 }
