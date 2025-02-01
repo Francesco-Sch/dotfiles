@@ -4,12 +4,6 @@
 # All the things I need to operate my digital self
 # Categorized into different areas of interest
 
-# Tap every repository I need for this
-# tap "homebrew/bundle"
-# tap "homebrew/cask-drivers"
-# tap "homebrew/cask-versions"
-# tap "homebrew/services"
-
 
 # ---- System ----
 # Formulae
