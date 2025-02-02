@@ -23,6 +23,10 @@
     "dock": "right"
   },
   "assistant": {
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-latest"
+    },
     "dock": "left",
     "version": "2"
   },
