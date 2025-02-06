@@ -67,6 +67,7 @@ brew "ollama"
 brew "pnpm"
 brew "pyenv"
 brew "python@3.13"
+brew "qemu"
 brew "vim"
 
 # Casks
@@ -75,6 +76,7 @@ cask "cyberduck" # (S)FTP Client
 cask "ghostty" # Terminal of Choice
 cask "podman-desktop"
 cask "utm"
+cask "vagrant"
 cask "zed"
 
 # Apps
