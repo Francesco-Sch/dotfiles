@@ -1,0 +1,13 @@
+# Das ist Gits benutzerspezifische Konfigurationsdatei.
+[user]
+	name = Francesco Scheffczyk
+	email = francesco.scheffczyk@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	excludesfile = /Users/fscheffczyk/.gitignore
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
