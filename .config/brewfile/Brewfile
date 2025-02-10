@@ -68,6 +68,7 @@ brew "pnpm"
 brew "pyenv"
 brew "python@3.13"
 brew "qemu"
+brew "ruff"
 brew "vim"
 
 # Casks
