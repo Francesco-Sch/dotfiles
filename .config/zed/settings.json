@@ -45,7 +45,7 @@
     "docker-compose": true
   },
 
-  // Languages
+  // Languages & LSP
   "languages": {
     "Python": {
       "language_servers": ["pyright", "ruff"],
