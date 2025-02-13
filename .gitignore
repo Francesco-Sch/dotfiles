@@ -1,2 +1,6 @@
 .DS_Store
 **/node_modules/
+
+# This can propably be removed as soon as Zed fixes it issues
+# https://github.com/zed-industries/zed/issues/22085
+.ropeproject
