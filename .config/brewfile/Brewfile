@@ -86,6 +86,9 @@ mas "Xcode", id: 497799835
 
 # ---- Productivity ----
 
+# Formulae
+brew "pandoc"
+
 # Casks
 cask "obsidian"
 cask "zotero"
