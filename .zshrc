@@ -33,6 +33,18 @@ source $ZSH/oh-my-zsh.sh
 
 # ---- User Configuration ----
 
+# -- Environment Variables --
+# Second Brain
+export BRAIN=$HOME/SecondBrain
+
+# Cloud Drive
+export DRIVE=$HOME/'pCloud Drive'
+export MASTER=$DRIVE/02\ Dokumente/02\ Study/04\ Master\ -\ HfK\ Bremen
+
+# Code Projects
+export CODE=$HOME/DevProjects
+export CODE_THESIS=$CODE/sys-net-visible/public/francesco
+
 # -- Aliases --
 # Navigation the file system
 alias l="eza -l --all --git --git-repos"
@@ -44,6 +56,9 @@ alias code="zed"
 
 # Kubernetes
 alias k='kubectl'
+
+# Pandoc
+alias thesis="pandoc \"$BRAIN/03 Study/02 Digital Media MA - HfK Bremen/5. Semester/Master Thesis/thesis/sys-net-visible_thesis.md\" -o $CODE_THESIS/thesis.html --citeproc --bibliography=\"$MASTER/05 5. Semester/01 Master Thesis/02 Thesis – sys-net-visible/01 Paper/sys-net-visible_bibliography.bib\" --csl=$HOME/Zotero/styles/ieee-with-url.csl && open $CODE_THESIS/thesis.html"
 
 
 # ---- Tooling Configuration ----
