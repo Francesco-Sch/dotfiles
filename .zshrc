@@ -58,8 +58,41 @@ alias code="zed"
 alias k='kubectl'
 
 # Pandoc
-alias thesis="pandoc \"$BRAIN/03 Study/02 Digital Media MA - HfK Bremen/5. Semester/Master Thesis/thesis/sys-net-visible_thesis.md\" -o $CODE_THESIS/thesis.html --citeproc --bibliography=\"$MASTER/05 5. Semester/01 Master Thesis/02 Thesis – sys-net-visible/01 Paper/sys-net-visible_bibliography.bib\" --csl=$HOME/Zotero/styles/ieee-with-url.csl && open $CODE_THESIS/thesis.html"
+alias thesis="
+pandoc \
+    \"$BRAIN/03 Study/02 Digital Media MA - HfK Bremen/5. Semester/Master Thesis/thesis/sys-net-visible_thesis.md\" \
+    -o $CODE_THESIS/thesis.html \
+    --template=\"$CODE/pandoc/thesis-tmpl.html\" \
+    -s \
+    --toc \
+    -N \
+    --citeproc \
+    --bibliography=\"$MASTER/05 5. Semester/01 Master Thesis/02 Thesis – sys-net-visible/01 Paper/sys-net-visible_bibliography.bib\" \
+    --csl=$HOME/Zotero/styles/ieee-with-url.csl \
+    --resource-path=.:\"$BRAIN/99 Assets/\" \
+    --extract-media=\"assets/\" \
+    && open $CODE_THESIS/thesis.html
+"
 
+alias thesis-logs="
+pandoc \
+  --section-divs \
+  --template=\"$CODE/pandoc/thesis-logs-tmpl.html\" \
+  --metadata title=\"Logs – /sys/net/visible\" \
+  -f markdown-tex_math_dollars \
+  -s \
+  --toc \
+  --toc-depth=1 \
+  -V toc-title:\"Days\" \
+  --lua-filter=\"$CODE/pandoc/obsidian_embed.lua\" \
+  --lua-filter=\"$CODE/pandoc/obsidian_wikilink_replacer.lua\" \
+  --resource-path=.:\"$BRAIN/99 Assets/\" \
+  --extract-media=\"assets/\" \
+  \"$BRAIN/03 Study/02 Digital Media MA - HfK Bremen/5. Semester/Master Thesis/logs/\"*.md \
+  -o \"$CODE_THESIS/logs.html\"
+
+echo \"Log pages generated successfully!\"
+"
 
 # ---- Tooling Configuration ----
 
@@ -84,3 +117,9 @@ complete -o default -F __start_kubectl k
 
 # -- pyenv --
 eval "$(pyenv init --path)"
+
+# -- Docker CLI completions --
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/fscheffczyk/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
