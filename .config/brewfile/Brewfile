@@ -28,6 +28,7 @@ cask "stats"
 cask "surfshark"
 
 # Apps
+mas "AusweisApp", id: 948660805
 mas "pCloud Pass", id: 1607974524
 
 
