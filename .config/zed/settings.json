@@ -26,13 +26,16 @@
     "dock": "right"
   },
   "agent": {
-    "default_profile": "ask",
-    "default_model": {
+    "inline_assistant_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-thinking-latest"
+      "model": "claude-sonnet-4-latest"
     },
-    "dock": "left",
-    "version": "2"
+    "default_profile": "write",
+    "default_model": {
+      "provider": "openai",
+      "model": "gpt-5"
+    },
+    "dock": "left"
   },
 
   // List of extensions

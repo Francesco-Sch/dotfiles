@@ -18,3 +18,4 @@ font-style-bold-italic = 650Italic
 shell-integration = zsh
 
 adw-toolbar-style = flat
+keybind = shift+enter=text:\n
