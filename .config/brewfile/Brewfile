@@ -11,6 +11,7 @@ brew "bat" # Preview files in terminal
 brew "eza" # Lists files in terminal
 brew "ffmpeg" # File conversion
 brew "fzf" # Fuzzy-find files
+brew "gnupg" # For encrypting secrets. Used for secret management with yadm.
 brew "tmux"
 brew "tree"
 brew "wget"
@@ -44,7 +45,6 @@ cask "zoom"
 # ---- Design ----
 
 # Casks
-cask "adobe-creative-cloud" # I hope I can let this go soon
 cask "figma"
 cask "obs"
 
@@ -79,6 +79,7 @@ cask "ghostty" # Terminal of Choice
 cask "podman-desktop"
 cask "utm"
 cask "vagrant"
+cask "virtualbox"
 cask "zed"
 
 # Apps
