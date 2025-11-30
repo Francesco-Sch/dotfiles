@@ -8,6 +8,9 @@
 # Homebrew Path
 export PATH="/opt/homebrew/bin:$PATH"
 
+# Brewfile Path
+export HOMEBREW_BUNDLE_FILE="$HOME/.config/brewfile/Brewfile"
+
 # -- ZSH / oh-my-zsh --
 # Path to the oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
