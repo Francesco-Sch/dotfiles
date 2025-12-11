@@ -6,3 +6,10 @@
       (org-babel-tangle))))
 
 (add-hook 'after-save-hook #'fs-tangle-literate-emacs-config)
+
+(use-package org
+  :ensure nil  ; Org is built-in, so we don't need to download it
+  :config
+(setq org-ellipsis " ▾"))
+
+(add-hook 'org-mode-hook #'visual-line-mode)
