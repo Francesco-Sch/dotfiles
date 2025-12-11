@@ -4,9 +4,16 @@
 
 This is my literate Emacs configuration file. From here code blocks are extracted and stored in their respected configuration files. This file is also known as "tangling".
 
-Currently this file tangles all code blocks to the =init.el= file. Later I might switch to a setup where decide on a per code block basis to which file I want to extract to. This could be beneficial if I for example want to keep an =early-init.el= setup in this file as well. For now I want to keep it simple.
+Currently this file tangles all code blocks to the =init.el= file. Later I might switch to a setup where decide on a per code block basis to which file I want to extract to. This could be beneficial if I for example want to keep an =early-init.el= setup in this file as well. For now I want to keep it
 
 * Early configuration
+
+** Lexical Binding
+Lexical Binding needs to be enabled for the whole tangled file to prevent compilation warnings. This must be the very first line of the tangled file.
+
+#+begin_src emacs-lisp
+  ;;; -*- lexical-binding: t; -*-
+#+end_src
 
 ** Tangle on Save Hook
 This block registers the save hook. It tangles =init.el= so that on the next startup, the hook is re-registered automatically.
@@ -46,11 +53,9 @@ Changes to the appearance in Org Mode.
 #+end_src
 
 ** Completion system
-
 This section configures the completion and fuzzy find system. Multiple packages work here together to create the so-called "minad" stack.
 
 *** Vertico
-
 Vertico is *the UI* and provides a vertical list interface. It is minimal and complies to strictly with built-in Emacs standards.
 
 #+begin_src emacs-lisp
@@ -59,10 +64,36 @@ Vertico is *the UI* and provides a vertical list interface. It is minimal and co
     :init (vertico-mode))
 #+end_src
 
-=savehist-mode= is enabled so Vertico can sort candidades by your usage history.
+=savehist-mode= is enabled so Vertico can sort candidates by your usage history.
 
 #+begin_src emacs-lisp
   (use-package savehist
     :ensure nil ; Built-in
     :init (savehist-mode))
+#+end_src
+
+*** Orderless
+Orderless is the actual *"fuzzy" engine*. It allows me to filter candidates by typing space-seperated components in any order.
+
+With =completion-styles= it is globally declared that orderless is the favoured completion style. basic is a fall back.
+A completion style is a backend for completion and it is used by a frontend that provides a completion UI, in this case Vertico.
+
+=completion-catgory-overrides= is used here to define a special case for finding files with =C-x C-f=.
+As searching fuzzily into deep subfolders is not possible here, I changed the behaviour here to =partial-completion=.
+This allows me to only write partial folder names to navigate to file for example ~/.c/e/con -> ~/.config/emacs/config.org
+
+=orderless-matching-styles= defines a list of styles in which each component of a pattern can match.
+=orderless-literal= and =orderless-regexp= are defaults allowing literal and regular expression search.
+=orderless-flex= enables the /fuzzy/ search. Characters should appear in that order in the candidate, but not necessarily consecutively.
+
+#+begin_src emacs-lisp
+  (use-package orderless
+    :ensure t
+    :custom
+    (completion-styles '(orderless basic))
+    (completion-category-overrides '((file (styles partial-completion))))
+    (orderless-matching-styles
+     '(orderless-literal
+       orderless-regexp
+       orderless-flex)))
 #+end_src

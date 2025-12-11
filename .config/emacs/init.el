@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 (defun fs-tangle-literate-emacs-config ()
   "Tangle the current org file on save."
   (when (string-equal (buffer-file-name)
@@ -22,15 +24,13 @@
 (use-package savehist
   :ensure nil ; Built-in
   :init (savehist-mode))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
+(use-package orderless
+  :ensure t
+  :custom
+  (completion-styles '(orderless basic))
+  (completion-category-overrides '((file (styles partial-completion))))
+  (orderless-matching-styles
+   '(orderless-literal
+     orderless-regexp
+     orderless-flex)))
