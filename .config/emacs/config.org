@@ -23,14 +23,12 @@ This block registers the save hook. It tangles =init.el= so that on the next sta
 #+end_src
 
 * Packages
-
 Here I define all configurations related to extensions and packages.
 
 ** Org Mode
 
 *** Base setup
-
-First we need to load the package. It is already integrated with Emacs therefore there is no need to download it.
+We need to load the package. It is already integrated with Emacs therefore there is no need to download it.
 
 #+begin_src emacs-lisp
   (use-package org
@@ -40,9 +38,9 @@ First we need to load the package. It is already integrated with Emacs therefore
 #+end_src
 
 *** Appearance
-
-First the lines should wrap. This makes writing and reading easier.
+Changes to the appearance in Org Mode.
 
 #+begin_src emacs-lisp
-  (add-hook 'org-mode-hook #'visual-line-mode)
+  (add-hook 'org-mode-hook #'org-indent-mode) ; Indent text below headlines
+  (add-hook 'org-mode-hook #'visual-line-mode) ; Wraps lines that are longer then the window
 #+end_src

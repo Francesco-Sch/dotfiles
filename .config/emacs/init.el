@@ -12,4 +12,5 @@
   :config
 (setq org-ellipsis " ▾"))
 
-(add-hook 'org-mode-hook #'visual-line-mode)
+(add-hook 'org-mode-hook #'org-indent-mode) ; Indent text below headlines
+(add-hook 'org-mode-hook #'visual-line-mode) ; Wraps lines that are longer then the window
