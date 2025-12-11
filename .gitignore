@@ -11,6 +11,10 @@ auto-save-list
 tramp
 .\#*
 
+.config/emacs/elpa/
+.config/emacs/history
+
+
 # This can propably be removed as soon as Zed fixes it issues
 # https://github.com/zed-industries/zed/issues/22085
 .ropeproject

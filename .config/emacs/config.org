@@ -44,3 +44,25 @@ Changes to the appearance in Org Mode.
   (add-hook 'org-mode-hook #'org-indent-mode) ; Indent text below headlines
   (add-hook 'org-mode-hook #'visual-line-mode) ; Wraps lines that are longer then the window
 #+end_src
+
+** Completion system
+
+This section configures the completion and fuzzy find system. Multiple packages work here together to create the so-called "minad" stack.
+
+*** Vertico
+
+Vertico is *the UI* and provides a vertical list interface. It is minimal and complies to strictly with built-in Emacs standards.
+
+#+begin_src emacs-lisp
+  (use-package vertico
+    :ensure t
+    :init (vertico-mode))
+#+end_src
+
+=savehist-mode= is enabled so Vertico can sort candidades by your usage history.
+
+#+begin_src emacs-lisp
+  (use-package savehist
+    :ensure nil ; Built-in
+    :init (savehist-mode))
+#+end_src
