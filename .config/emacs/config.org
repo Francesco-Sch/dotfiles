@@ -97,3 +97,12 @@ This allows me to only write partial folder names to navigate to file for exampl
        orderless-regexp
        orderless-flex)))
 #+end_src
+
+*** Marginalia
+Adds *rich metadata* to the side of the completion list. This can be file modes, docstrings or command keybindings.
+
+#+begin_src emacs-lisp
+  (use-package marginalia
+    :ensure t
+    :init (marginalia-mode))
+#+end_src

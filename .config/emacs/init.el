@@ -34,3 +34,7 @@
    '(orderless-literal
      orderless-regexp
      orderless-flex)))
+
+(use-package marginalia
+  :ensure t
+  :init (marginalia-mode))
