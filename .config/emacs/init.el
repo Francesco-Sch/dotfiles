@@ -38,3 +38,12 @@
 (use-package marginalia
   :ensure t
   :init (marginalia-mode))
+
+(use-package consult
+  :ensure t
+
+  ; A sane subset of key bindings
+  :bind (
+        ("C-s" . consult-line) ; Search within buffer
+        ("C-x b" . consult-buffer)) ; Switch buffer with preview
+  )

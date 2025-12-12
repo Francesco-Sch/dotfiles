@@ -106,3 +106,18 @@ Adds *rich metadata* to the side of the completion list. This can be file modes,
     :ensure t
     :init (marginalia-mode))
 #+end_src
+
+*** Consult
+Consult provides *search and navigation* commands.
+These commands replace regular commands like =switch-to-buffer= and add additional functionalities like live previewing and ripgrep search.
+
+#+begin_src emacs-lisp
+  (use-package consult
+    :ensure t
+
+    ; A sane subset of key bindings
+    :bind (
+          ("C-s" . consult-line) ; Search within buffer
+          ("C-x b" . consult-buffer)) ; Switch buffer with preview
+    )
+#+end_src
