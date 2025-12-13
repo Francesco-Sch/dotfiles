@@ -95,12 +95,8 @@ brew "pandoc"
 cask "obsidian"
 cask "zotero"
 
-# Apps
-mas "Session", id: 1521432881 # Pomodoro Timer
-
 
 # ---- Entertainment ----
 
 # Casks
-cask "spotify"
 cask "vlc"
