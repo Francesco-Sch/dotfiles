@@ -73,7 +73,7 @@ pandoc \
     --bibliography=\"$MASTER/05 5. Semester/01 Master Thesis/02 Thesis – sys-net-visible/01 Paper/sys-net-visible_bibliography.bib\" \
     --csl=$HOME/Zotero/styles/ieee-with-url.csl \
     --resource-path=.:\"$BRAIN/99 Assets/\" \
-    --extract-media=\"assets/\" \
+    --extract-media=\"$CODE_THESIS/assets/\" \
     && open $CODE_THESIS/thesis.html
 "
 
@@ -90,7 +90,7 @@ pandoc \
   --lua-filter=\"$CODE/pandoc/obsidian_embed.lua\" \
   --lua-filter=\"$CODE/pandoc/obsidian_wikilink_replacer.lua\" \
   --resource-path=.:\"$BRAIN/99 Assets/\" \
-  --extract-media=\"assets/\" \
+  --extract-media=\"$CODE_THESIS/assets/\" \
   \"$BRAIN/03 Study/02 Digital Media MA - HfK Bremen/5. Semester/Master Thesis/logs/\"*.md \
   -o \"$CODE_THESIS/logs.html\"
 
