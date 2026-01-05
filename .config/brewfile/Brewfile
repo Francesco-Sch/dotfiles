@@ -21,9 +21,9 @@ brew "zoxide"
 
 # Casks
 cask "amethyst" # Window Manager of choice
-cask "firefox"
-cask "firefox@developer-edition"
-cask "google-chrome"
+cask "waterfox" # Browser of choice
+cask "firefox@developer-edition" # Alternative for web dev
+cask "google-chrome" # Alternative for web dev
 cask "logitech-options"
 cask "stats"
 cask "surfshark"
